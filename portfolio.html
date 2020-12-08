@@ -25,7 +25,8 @@
                         </a>
                     </li>
                     <li>
-                        <a href="./portfolio.html" class="link-current">
+                        <a href="./portfolio.html"
+                        class="link-current">
                             Портфолио
                         </a>
                     </li>
@@ -38,14 +39,24 @@
             </nav>
             <ul class="nav-mail-tel">
                 <li>
-                    <a href="mailto:info@devstudio.com">
-                        info@devstudio.com
-                    </a>
+                    <div class="mail-letter">
+                        <a href="mailto:info@devstudio.com">
+                            <svg class="letter">
+                                <use href="./images/sprite.svg#icon-envelope"></use>
+                            </svg>
+                            info@devstudio.com
+                        </a>
+                    </div>
                 </li>
                 <li>
-                    <a href="tel:+380961111111">
-                        +38 096 111 11 11
-                    </a>
+                    <div class="tel-letter">
+                        <a href="tel:+380961111111">
+                            <svg class="vector">
+                                <use href="./images/sprite.svg#icon-Vector"></use>
+                            </svg>
+                            +38 096 111 11 11
+                        </a>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -148,25 +159,64 @@
         </section>
     </main>
     <footer>
-        <div class="container">
-            <a href="/" class="logo"><span class="logo-web">Web</span><span class="logo-studiotwo">Studio</span></a>
-            <address>
-                <ul class="address-footer">
+        <div class="container footer-div">
+            <div class="cont-footer">
+                <a href="/" class="logo"><span class="logo-web">Web</span><span class="logo-studiotwo">Studio</span></a>
+                <address>
+                    <ul class="address-footer">
+                        <li>
+                            <a href="#">г. Киев, пр-т Леси Украинки, 26</a>
+                        </li>
+                        <li>
+                            <a class="address-mail-tel" href="mailto:info@example.com">
+                                info@example.com
+                            </a>
+                        </li>
+                        <li>
+                            <a class="address-mail-tel" href="tel:+380991111111">
+                                +38 099 111 11 11
+                            </a>
+                        </li>
+                    </ul>
+                </address>
+            </div>
+            <div class="join">
+                <a> присоединяйтесь </a>
+                <ul class="socials-listf">
                     <li>
-                        <a href="#">г. Киев, пр-т Леси Украинки, 26</a>
-                    </li>
-                    <li>
-                        <a class="address-mail-tel" href="mailto:info@example.com">
-                            info@example.com
+                        <a class="socials-iconf" href="#">
+                            <svg width="20" height="20">
+                                <use href="./images/sprite.svg#icon-instagram">
+                                </use>
+                            </svg>
                         </a>
                     </li>
                     <li>
-                        <a class="address-mail-tel" href="tel:+380991111111">
-                            +38 099 111 11 11
+                        <a class="socials-iconf" href="#">
+                            <svg width="20" height="20">
+                                <use href="./images/sprite.svg#icon-twitter">
+                                </use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="socials-iconf" href="#">
+                            <svg width="20" height="20">
+                                <use href="./images/sprite.svg#icon-facebook">
+                                </use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="socials-iconf" href="#">
+                            <svg width="20" height="20">
+                                <use href="./images/sprite.svg#icon-linkedinf">
+                                </use>
+                            </svg>
                         </a>
                     </li>
                 </ul>
-            </address>
+            </div>
         </div>
     </footer>
 </body>

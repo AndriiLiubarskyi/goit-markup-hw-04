@@ -57,8 +57,6 @@ header {
 .nav {
   display: block;
   display: flex;
-  /*width: 294px;
-  height: 16px;*/
   padding-left: 0;
   margin-left: 93px;
   letter-spacing: 0.03em;
@@ -108,7 +106,7 @@ header {
   height: 16px;
 }
 .nav-mail-tel a {
-  fill: #757575;
+  fill: var(--secondary-text-color);
 }
 .mail-letter a:hover {
   color: var(--accent-color);
@@ -186,7 +184,6 @@ nav .link-current {
   text-transform: uppercase;
   letter-spacing: 2.64px;
   max-width: 696px;
-  /*padding-top: 200px;*/
   margin-top: 0;
   margin-bottom: 0;
   margin-left: auto;
@@ -276,7 +273,7 @@ nav .link-current {
   color: var(--primary-text-color);
 }
 .headtwo-div {
-  padding-top: 94px;
+  padding-top: 0;
   padding-bottom: 94px;
 }
 .headtwo-team {
@@ -334,12 +331,14 @@ nav .link-current {
   align-items: center;
   background-color: var(--logo-accent-footer);
   margin-right: 30px;
-  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
-  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .people .item:nth-child(4n) {
   margin-right: 0;
+}
+.people .item:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .name-team {
   padding-top: 30px;
@@ -363,7 +362,62 @@ nav .link-current {
   margin-top: 10px;
   margin-bottom: 0;
 }
-.socials-list {
+.company-div {
+  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 1170px;
+  height: 377px;
+  padding-top: 101px;
+  padding-bottom: 93px;
+}
+.regular-customers {
+  display: block;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+  margin-bottom: 50px;
+  margin-top: 0;
+}
+.customer-icon {
+  display: block;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+}
+.comp-items a {
+  display: block;
+  display: flex;
+  border: 1px solid #afb1b8;
+  width: 170px;
+  height: 90px;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30px;
+}
+.comp-items:last-child {
+  margin-right: 0;
+}
+.comp-items a:hover,
+.comp-items a:focus {
+  border-color: var(--accent-color);
+  fill: var(--accent-color);
+}
+.company-icon {
+  display: block;
+  display: flex;
+}
+
+.comp-items a {
+  fill: #afb1b8;
+}
+.socials-list,
+.socials-listf {
   display: block;
   display: flex;
   justify-content: center;
@@ -372,10 +426,13 @@ nav .link-current {
   height: 44px;
   padding: 0;
 }
-.socials-icon {
+.socials-listf {
+  margin-top: 20px;
+}
+.socials-icon,
+.socials-iconf {
   display: block;
   display: flex;
-  fill: #757575;
   justify-content: center;
   align-items: center;
   width: 44px;
@@ -384,6 +441,23 @@ nav .link-current {
   color: var(--icon-color);
   background-color: rgba(255, 255, 255, 0.1);
 }
+.socials-list,
+.socials-listf li {
+  margin-right: 10px;
+}
+.socials-list,
+.socials-listf li:nth-child(4n) {
+  margin-right: 0;
+}
+
+.socials-icon {
+  fill: var(--secondary-text-color);
+}
+.socials-iconf {
+  fill: var(--logo-accent-footer);
+}
+.socials-iconf:focus,
+.socials-iconf:hover,
 .socials-icon:focus,
 .socials-icon:hover {
   background-color: var(--icon-bg-hover);
@@ -397,7 +471,7 @@ nav .link-current {
 .footer-div {
   display: block;
   display: flex;
-  align-items: flex-start;
+  height: 132 px;
   width: 231px;
   margin: 0 auto 0 auto;
 }
@@ -408,7 +482,7 @@ address {
   margin-top: 20px;
 }
 .address-footer {
-  display: inline-block;
+  display: block;
   letter-spacing: 0.03em;
   padding: 0;
   margin: 0;
@@ -492,6 +566,11 @@ address {
   margin-right: 30px;
   margin-bottom: 30px;
 }
+.portf-portf .item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .portf-portf .item:nth-child(3n) {
   margin-right: 0;
 }
@@ -513,7 +592,6 @@ address {
   font-weight: 700;
   color: var(--primary-text-color);
   line-height: 2;
-  /*display: block;*/
   margin-top: 0;
   margin-bottom: 4px;
   letter-spacing: 0.06em;
@@ -523,7 +601,6 @@ address {
   font-weight: 400;
   color: var(--secondary-text-color);
   line-height: 1.88;
-  /*display: block;*/
   margin-top: 0;
   margin-bottom: 0;
   letter-spacing: 0.03em;
@@ -542,8 +619,19 @@ footer {
 footer .cont-footer {
   display: block;
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   width: 231px;
-  height: ;
+  height: 132px;
+  margin-right: 70px;
+}
+.cont-footer > a {
+  display: block;
+}
+.join {
+  padding-top: 12px;
+  width: 206px;
+  height: 80px;
 }
 .join > a {
   display: block;
@@ -567,7 +655,6 @@ footer .cont-footer {
   padding-left: 0;
   padding-right: 0;
   align-items: center;
-  /*justify-content: space-between;*/
 }
 .container {
   width: 1200px;
