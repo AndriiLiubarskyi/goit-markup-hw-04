@@ -6,6 +6,10 @@
   --secondary-text-color: #757575;
   --contacts-color-footer: rgba(255, 255, 255, 0.6);
   --icon-bg-hover: rgba(33, 150, 243, 1);
+  --header-footer-bg: #2f303a;
+  --button-color: #f5f4fa;
+  --company-icon: #afb1b8;
+  --product: #eeeeee;
 }
 *,
 *::before,
@@ -97,6 +101,8 @@ header {
   width: 16px;
   height: 12px;
   margin-right: 10px;
+  fill: var(--secondary-text-color);
+  fill: currentColor;
 }
 .mail-letter {
   display: block;
@@ -104,17 +110,18 @@ header {
   align-items: center;
   width: 161px;
   height: 16px;
+  color: var(--secondary-text-color);
 }
 .nav-mail-tel a {
-  fill: var(--secondary-text-color);
+  color: var(--secondary-text-color);
 }
-.mail-letter a:hover {
+.nav-mail-tel a:hover,
+.nav-mail-tel a:focus {
   color: var(--accent-color);
   fill: var(--accent-color);
 }
 .tel-letter a:hover {
   color: var(--accent-color);
-  fill: var(--accent-color);
 }
 .tel-letter {
   width: 142px;
@@ -125,6 +132,8 @@ header {
   width: 10px;
   height: 16px;
   margin-right: 10px;
+  fill: var(--secondary-text-color);
+  fill: currentColor;
 }
 .nav a {
   display: block;
@@ -175,10 +184,10 @@ nav .link-current {
 .hero {
   display: block;
   height: 600px;
-  width: 1600px;
+  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
-  background-color: #2f303a;
+  background-color: var(--header-footer-bg);
 }
 .head-one {
   text-transform: uppercase;
@@ -239,7 +248,7 @@ nav .link-current {
   align-items: center;
   width: 270px;
   height: 120px;
-  background-color: #f5f4fa;
+  background-color: var(--button-color);
   border-radius: 4px;
 }
 .specialty .icon {
@@ -342,7 +351,7 @@ nav .link-current {
 }
 .name-team {
   padding-top: 30px;
-  padding-bottom: 16px;
+  padding-bottom: 0;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -360,7 +369,7 @@ nav .link-current {
   font-weight: 400;
   color: var(--secondary-text-color);
   margin-top: 10px;
-  margin-bottom: 0;
+  margin-bottom: 16px;
 }
 .company-div {
   display: block;
@@ -389,10 +398,10 @@ nav .link-current {
   flex-direction: row;
   padding: 0;
 }
-.comp-items a {
+.comp-items {
   display: block;
   display: flex;
-  border: 1px solid #afb1b8;
+  border: 1px solid var(--company-icon);
   width: 170px;
   height: 90px;
   border-radius: 4px;
@@ -403,19 +412,23 @@ nav .link-current {
 .comp-items:last-child {
   margin-right: 0;
 }
-.comp-items a:hover,
-.comp-items a:focus {
+.compicon {
+  fill: var(--secondary-text-color);
+  fill: currentColor;
+}
+.company-icon:hover,
+.company-icon:focus {
   border-color: var(--accent-color);
-  fill: var(--accent-color);
+  color: var(--accent-color);
 }
 .company-icon {
   display: block;
   display: flex;
+  color: var(--company-icon);
 }
 
-.comp-items a {
-  fill: #afb1b8;
-}
+/*.comp-items a {
+}*/
 .socials-list,
 .socials-listf {
   display: block;
@@ -438,7 +451,7 @@ nav .link-current {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  color: var(--icon-color);
+  color: var(--company-icon);
   background-color: rgba(255, 255, 255, 0.1);
 }
 .socials-list,
@@ -450,18 +463,19 @@ nav .link-current {
   margin-right: 0;
 }
 
-.socials-icon {
+.social-svg {
   fill: var(--secondary-text-color);
+  fill: currentColor;
 }
 .socials-iconf {
   fill: var(--logo-accent-footer);
 }
 .socials-iconf:focus,
 .socials-iconf:hover,
-.socials-icon:focus,
-.socials-icon:hover {
+.socials-list .socials-icon:focus,
+.socials-list .socials-icon:hover {
   background-color: var(--icon-bg-hover);
-  fill: var(--logo-accent-footer);
+  color: var(--logo-accent-footer);
 }
 .logo {
   display: inline-block;
@@ -470,9 +484,8 @@ nav .link-current {
 }
 .footer-div {
   display: block;
+  align-items: baseline;
   display: flex;
-  height: 132 px;
-  width: 231px;
   margin: 0 auto 0 auto;
 }
 address {
@@ -522,7 +535,7 @@ address {
 .filter-portfolio button {
   border-style: none;
   color: var(--primary-text-color);
-  background-color: #f5f4fa;
+  background-color: var(--button-color);
   border-radius: 4px;
   padding: 6px 22px 6px 22px;
   letter-spacing: 0.03em;
@@ -566,7 +579,10 @@ address {
   margin-right: 30px;
   margin-bottom: 30px;
 }
-.portf-portf .item:hover {
+.portf-shadow {
+  display: block;
+}
+.portf-shadow:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -583,9 +599,9 @@ address {
   width: 370px;
   height: 110px;
   padding: 20px 24px;
-  border-bottom: 1px solid #eeeeee;
-  border-right: 1px solid #eeeeee;
-  border-left: 1px solid #eeeeee;
+  border-bottom: 1px solid var(--product);
+  border-right: 1px solid var(--product);
+  border-left: 1px solid var(--product);
 }
 .portf-portf h2 {
   font-size: 18px;
@@ -612,7 +628,7 @@ a:focus {
 footer {
   display: block;
   display: flex;
-  background-color: #2f303a;
+  background-color: var(--header-footer-bg);
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -628,11 +644,6 @@ footer .cont-footer {
 .cont-footer > a {
   display: block;
 }
-.join {
-  padding-top: 12px;
-  width: 206px;
-  height: 80px;
-}
 .join > a {
   display: block;
   width: 145px;
@@ -646,7 +657,7 @@ footer .cont-footer {
   color: var(--logo-accent-footer);
 }
 .team {
-  background-color: #f5f4fa;
+  background-color: var(--button-color);
 }
 .navbox {
   display: block;
