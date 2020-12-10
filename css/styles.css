@@ -329,15 +329,8 @@ nav .link-current {
   letter-spacing: 0.03em;
 }
 .people .item {
-  display: block;
-  display: flex;
-  box-sizing: border-box;
   border-radius: 0 0 4px 4px;
   width: 270px;
-  height: 428px;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
   background-color: var(--logo-accent-footer);
   margin-right: 30px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -350,8 +343,13 @@ nav .link-current {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .name-team {
+  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   padding-top: 30px;
-  padding-bottom: 0;
+  padding-bottom: 30px;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -433,14 +431,17 @@ nav .link-current {
 .socials-listf {
   display: block;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  width: 206px;
-  height: 44px;
-  padding: 0;
+  width: 100%;
+}
+.socials-list {
+  padding-left: 17px;
+  padding-right: 17px;
 }
 .socials-listf {
   margin-top: 20px;
+  padding: 0;
 }
 .socials-icon,
 .socials-iconf {
@@ -656,6 +657,15 @@ footer .cont-footer {
   text-transform: uppercase;
   color: var(--logo-accent-footer);
 }
+.join p {
+  padding: 0;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--logo-accent-footer);
+}
 .team {
   background-color: var(--button-color);
 }
@@ -685,3 +695,12 @@ footer .cont-footer {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+
+/*.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+}*/
