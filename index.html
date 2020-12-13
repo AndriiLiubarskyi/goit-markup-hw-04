@@ -65,7 +65,7 @@
         <section class="hero centered">
             <div class="container heroorder">
                 <h1 class="head-one">Эффективные решения для вашего бизнеса</h1>
-                <button class="button-order">
+                <button data-open-modal class="button-order">
                     Заказать услугу
                 </button>
             </div>
@@ -144,14 +144,23 @@
                 <ul class="ourwork">
                     <li class="item">
                         <img src="./images/img1.jpg" alt="разработка алгоритма" width="370" />
+                        <p>
+                            Десктопные приложения
+                        </p>
                     </li>
 
                     <li class="item">
                         <img src="./images/img2.jpg" alt="интеграция с андроид" width="370" />
+                        <p>
+                            Мобильные приложения
+                        </p>
                     </li>
 
                     <li class="item">
                         <img src="./images/img3.jpg" alt="разработка дизайна" width="370" />
+                        <p>
+                            Дизайнерские решения
+                        </p>
                     </li>
 
                 </ul>
@@ -341,11 +350,12 @@
                 <ul class="customer-icon marginzero">
                     <li class="comp-items">
                         <a class="company-icon" href="#">
-                            <svg class="compicon" width="44" height="49">
-                                <use href="./images/sprite.svg#icon-logoyaco">
-                                </use>
-                            </svg>
+                                <svg class="compicon" width="44" height="49">
+                                    <use href="./images/sprite.svg#icon-logoyaco">
+                                    </use>
+                                </svg>
                         </a> 
+                        
                     </li>
                     <li class="comp-items">
                         <a class="company-icon" href="#">
@@ -453,7 +463,28 @@
         </div>
     </footer>
 
-  <!--<div class="backdrop"></div>-->
+  <div class="backdrop is-hidden" data-backdrop >
+    <div class="modal">
+        <button class="btnclose" data-close-modal> 
+        </button>
+    </div>
+</div>
+
+    <script>
+        const refs = {
+                openModalBtn: document.querySelector('[data-open-modal]'),
+                closeModalBtn: document.querySelector('[data-close-modal]'),
+                modal: document.querySelector('[data-backdrop]'),
+            };
+
+            refs.openModalBtn.addEventListener('click', toggleModal);
+            refs.closeModalBtn.addEventListener('click', toggleModal);
+
+            function toggleModal() {
+                refs.modal.classList.toggle('is-hidden');
+            }
+        
+    </script>
 </body>
 
 </html>
